@@ -1,0 +1,161 @@
+*************************************    STACKED   ********************************************************
+
+Run # 1 (no changes)
+Step 1: Minibatch Loss: 0.449478
+Step 1000: Minibatch Loss: 0.144752
+Step 2000: Minibatch Loss: 0.130133
+Step 3000: Minibatch Loss: 0.120846
+Step 4000: Minibatch Loss: 0.113468
+Step 5000: Minibatch Loss: 0.107940
+
+
+Run # 2 (Learning Rate at 0.1)
+Step 1: Minibatch Loss: 0.443141
+Step 1000: Minibatch Loss: 0.197213
+Step 2000: Minibatch Loss: 0.185982
+Step 3000: Minibatch Loss: 0.179341
+Step 4000: Minibatch Loss: 0.176640
+Step 5000: Minibatch Loss: 0.176243
+Loss increased, image very distorted
+
+Run # 3 (Learning Rate at 0.001)
+Step 1: Minibatch Loss: 0.452690
+Step 1000: Minibatch Loss: 0.184412
+Step 2000: Minibatch Loss: 0.168929
+Step 3000: Minibatch Loss: 0.155669
+Step 4000: Minibatch Loss: 0.150678
+Step 5000: Minibatch Loss: 0.144990
+Loss increased, image has medium distortion
+
+Run # 4 (Batch Size 512)
+Step 1: Minibatch Loss: 0.444183
+Step 1000: Minibatch Loss: 0.129117
+Step 2000: Minibatch Loss: 0.110361
+Step 3000: Minibatch Loss: 0.101107
+Step 4000: Minibatch Loss: 0.093735
+Step 5000: Minibatch Loss: 0.089930
+Loss decreased, image distortion lowered from Run #1
+
+Run # 5 (Batch Size 1024)
+Step 1: Minibatch Loss: 0.452890
+Step 1000: Minibatch Loss: 0.135834
+Step 2000: Minibatch Loss: 0.117842
+Step 3000: Minibatch Loss: 0.106187
+Step 4000: Minibatch Loss: 0.101468
+Step 5000: Minibatch Loss: 0.098454
+Loss/image distortion increased from Run # 4, runtime significantly increased
+
+Run # 6 (Gradient Descent Optimizer - Learning rate at 0.01)
+Step 1: Minibatch Loss: 0.449574
+Step 1000: Minibatch Loss: 0.447457
+Step 2000: Minibatch Loss: 0.442519
+Step 3000: Minibatch Loss: 0.438558
+Step 4000: Minibatch Loss: 0.434089
+Step 5000: Minibatch Loss: 0.431370
+Loss significantly increased, Image unrecognizable
+
+Run # 7 (Adam Optimizer - Learning rate 0.01)
+Step 1: Minibatch Loss: 0.455449
+Step 1000: Minibatch Loss: 0.059743
+Step 2000: Minibatch Loss: 0.055238
+Step 3000: Minibatch Loss: 0.050760
+Step 4000: Minibatch Loss: 0.049519
+Step 5000: Minibatch Loss: 0.047893
+Loss/image distortion significant decrease, best results overall
+
+Run # 8 (Step increased to 10000)
+Step 1: Minibatch Loss: 0.458655
+Step 1000: Minibatch Loss: 0.075279
+Step 2000: Minibatch Loss: 0.063079
+Step 3000: Minibatch Loss: 0.057277
+Step 4000: Minibatch Loss: 0.055248
+Step 5000: Minibatch Loss: 0.053867
+Step 6000: Minibatch Loss: 0.052110
+Step 7000: Minibatch Loss: 0.052557
+Step 8000: Minibatch Loss: 0.050941
+Step 9000: Minibatch Loss: 0.050368
+Step 10000: Minibatch Loss: 0.051364
+No significant change from run # 7
+
+Run # 9 (3rd layer of Autoencoder added)
+Step 1: Minibatch Loss: 0.459115
+Step 1000: Minibatch Loss: 0.079921
+Step 2000: Minibatch Loss: 0.070803
+Step 3000: Minibatch Loss: 0.065422
+Step 4000: Minibatch Loss: 0.063323
+Step 5000: Minibatch Loss: 0.061583
+Slight decrease from run # 8
+
+****************************************** SIMPLE *************************************************
+
+Run # 1 (no changes)
+Training...
+  step, loss =      0:  0.734
+  step, loss =   1000:  0.262
+  step, loss =   2000:  0.250
+  step, loss =   3000:  0.233
+  step, loss =   4000:  0.222
+  step, loss =   5000:  0.214
+  step, loss =   6000:  0.211
+  step, loss =   7000:  0.203
+  step, loss =   8000:  0.197
+  step, loss =   9000:  0.190
+  step, loss =  10000:  0.176
+loss (test) =  0.17976473
+
+Run # 2 (Batch Size increased (256), Range decreased (6001), Optimizer .1 to .01)
+
+Training...
+  step, loss =      0:  0.740
+  step, loss =   1000:  0.342
+  step, loss =   2000:  0.292
+  step, loss =   3000:  0.283
+  step, loss =   4000:  0.268
+  step, loss =   5000:  0.270
+  step, loss =   6000:  0.270
+  loss (test) =  0.2662039
+
+  Loss increased
+
+Run # 3 (Batch Size decreased (64), Optimizer to .1)
+Training...
+  step, loss =      0:  0.728
+  step, loss =   1000:  0.274
+  step, loss =   2000:  0.247
+  step, loss =   3000:  0.237
+  step, loss =   4000:  0.224
+  step, loss =   5000:  0.211
+  step, loss =   6000:  0.207
+  loss (test) =  0.20531747
+    Loss increased from Run # 1
+
+Run # 4 (Batch size decreased (32), step increased 10001)
+
+Training...
+  step, loss =      0:  0.738
+  step, loss =   1000:  0.264
+  step, loss =   2000:  0.254
+  step, loss =   3000:  0.256
+  step, loss =   4000:  0.227
+  step, loss =   5000:  0.214
+  step, loss =   6000:  0.193
+  step, loss =   7000:  0.195
+  step, loss =   8000:  0.188
+  step, loss =   9000:  0.191
+  step, loss =  10000:  0.169
+  loss (test) =  0.17982607
+  No change from run #1
+
+Run # 5 (Optimizer changed to AdamOptimizer with 0.01 learning rate, steps at 6001)
+
+Training...
+  step, loss =      0:  0.391
+  step, loss =   1000:  0.065
+  step, loss =   2000:  0.068
+  step, loss =   3000:  0.063
+  step, loss =   4000:  0.066
+  step, loss =   5000:  0.067
+  step, loss =   6000:  0.065
+  loss (test) =  0.066782735
+  Significant decrease in loss from all previous runs....
+
